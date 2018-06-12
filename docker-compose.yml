@@ -1,0 +1,8 @@
+version: '3'
+services:
+  dnsserver: 
+   build: .
+   ports:
+     - "53:53/udp"
+     - "53:53"
+   restart: always
