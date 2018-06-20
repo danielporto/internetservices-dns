@@ -5,7 +5,7 @@ RUN apt update && \
     rm -rf /var/lib/apt/lists/* 
 
 # install DNS configuration
-COPY conf/etc/unbound/unbound.conf.d/* /etc/unbound/unbound.conf.d/
+COPY conf-private/etc/unbound/unbound.conf.d/* /etc/unbound/unbound.conf.d/
 
 #update the DNS root keys
 RUN unbound-anchor ; true
